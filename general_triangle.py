@@ -1,4 +1,4 @@
-rom shape import Shape
+from shape import Shape
 from math import sqrt
 
 class GeneralTriangle(Shape):

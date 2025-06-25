@@ -16,3 +16,7 @@ class Shape(ABC):
     def __str__(self):
         return "This is a Shape"
 
+    def __add__(self, other):
+        if isinstance(other, Shape):
+            return self.get_area() + other.get_area()
+        return NotImplemented
