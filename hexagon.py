@@ -3,6 +3,8 @@ from math import sqrt
 
 class RegularHexagon(Shape):
     def __init__(self, side_length):
+        if side_length <= 0:
+            raise ValueError("Side length must be a positive number.")
         self.side_length = side_length
 
     def get_area(self):
