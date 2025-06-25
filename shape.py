@@ -20,3 +20,8 @@ class Shape(ABC):
         if isinstance(other, Shape):
             return self.get_area() + other.get_area()
         return NotImplemented
+
+    def __lt__(self, other):
+        if not isinstance(other, Shape):
+            return NotImplemented
+        return self.get_area() < other.get_area()
